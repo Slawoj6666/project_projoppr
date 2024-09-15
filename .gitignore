@@ -32,3 +32,4 @@
 *.app
 /.vs/project_projoppr
 /x64/Debug
+/.vs
