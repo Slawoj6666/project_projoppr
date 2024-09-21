@@ -1,9 +1,5 @@
 #pragma once
-
-
 #include <raylib.h>
-#define MAX_buttons 4
-
 
 typedef struct buttons
 {
