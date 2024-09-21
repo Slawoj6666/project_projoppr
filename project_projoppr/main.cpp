@@ -4,7 +4,7 @@
 
 
 int main() {
-	InitWindow(1080, 1000, "test");
+	InitWindow(1080, 1000, "Projekt");
 
 	while (!WindowShouldClose()) {
 		//update here

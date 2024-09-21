@@ -14,25 +14,4 @@ C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(22,21):
 C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(23,19): warning C4305: 'initializing': truncation from 'double' to 'float'
   (compiling source file 'main.cpp')
   
-  menu.cpp
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(4,16): warning C4091: 'typedef ': ignored on left of 'buttons' when no variable is declared
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(20,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(21,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(22,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(23,19): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.cpp(8,107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.cpp(8,65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  LINK : C:\Users\slaw\source\repos\project_projoppr\x64\Debug\project_projoppr.exe not found or not built by the last incremental link; performing full link
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   project_projoppr.vcxproj -> C:\Users\slaw\source\repos\project_projoppr\x64\Debug\project_projoppr.exe

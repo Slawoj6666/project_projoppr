@@ -15,7 +15,7 @@ typedef struct buttons
 
 void renderMenu(buttons* button);
 
-namespace {
+namespace{
 	buttons MenuButtons[4] = {
 	{350,350,100,100,1,0.7,1,{GRAY},"text"},
 	{250,250,100,100,1,0.7,1,{GRAY},"text"},
