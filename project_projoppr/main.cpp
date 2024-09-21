@@ -6,7 +6,7 @@ int main() {
 
 	while (!WindowShouldClose()) {
 		//update here
-		//draw elemnts here
+		//draw elements here
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
 		renderMenu(MenuButtons);
