@@ -2,12 +2,13 @@
 
 int main() {
 	InitWindow(1920, 1080, "test");
+
 	Image img = LoadImage("data/Image.png");
 	Texture2D tex = LoadTextureFromImage(img);
+
 	while (!WindowShouldClose()) {
 		//update here
 		
-
 
 
 		//draw elemnts here
