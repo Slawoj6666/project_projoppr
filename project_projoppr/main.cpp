@@ -1,11 +1,6 @@
 #include <raylib.h>
 #include "menu/menu.h"
 
-
-
-
-
-
 int main() {
 	InitWindow(1080, 1000, "Projekt");
 
