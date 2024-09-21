@@ -1,2 +1,9 @@
 ﻿  main.cpp
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(8,16): warning C4091: 'typedef ': ignored on left of 'buttons' when no variable is declared
+  (compiling source file 'main.cpp')
+  
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\main.cpp(4,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\main.cpp(5,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\main.cpp(6,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\main.cpp(7,20): warning C4305: 'initializing': truncation from 'double' to 'float'
   project_projoppr.vcxproj -> C:\Users\slaw\source\repos\project_projoppr\x64\Debug\project_projoppr.exe
