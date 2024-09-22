@@ -15,6 +15,7 @@ typedef struct buttons
 };
 
 void renderMenu(buttons* button);
+void Menucollision(buttons* button,Vector2 rec);
 
 namespace{
 	buttons MenuButtons[4] = {
