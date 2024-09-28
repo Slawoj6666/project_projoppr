@@ -1,24 +1,22 @@
-﻿  menu.cpp
+﻿  main.cpp
 C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(4,16): warning C4091: 'typedef ': ignored on left of 'buttons' when no variable is declared
-  (compiling source file 'menu/menu.cpp')
-  
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(22,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
+  (compiling source file 'main.cpp')
   
 C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(23,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
+  (compiling source file 'main.cpp')
   
 C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(24,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
+  (compiling source file 'main.cpp')
   
 C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(25,21): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file 'menu/menu.cpp')
+  (compiling source file 'main.cpp')
   
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.cpp(11,107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.cpp(11,65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\slaw\source\repos\project_projoppr\project_projoppr\menu\menu.h(26,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'main.cpp')
+  
   Generating code
-  8 of 15 functions (53.3%) were compiled, the rest were copied from previous compilation.
+  1 of 15 functions ( 6.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   project_projoppr.vcxproj -> C:\Users\slaw\source\repos\project_projoppr\x64\Release\project_projoppr.exe

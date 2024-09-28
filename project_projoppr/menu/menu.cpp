@@ -2,7 +2,6 @@
 #include <iostream>
 
 
-
 void renderMenu(buttons* button){
 
 	for (int i = 0; i < sizeof(button); i++)
@@ -17,8 +16,8 @@ void Menucollision(buttons* button,Vector2 rec) {
 	{
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(rec, button[i].rec))
 		{
-			//do shit here
-			std::cout << "press" << std::endl;
+			screen = button[i].sn;
+			std::cout << button[i].sn << std::endl;
 		}
 	}
 };
