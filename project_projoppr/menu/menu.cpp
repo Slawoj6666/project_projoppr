@@ -7,7 +7,10 @@ void renderMenu(buttons* button){
 	for (int i = 0; i < sizeof(button); i++)
 	{
 		DrawRectangleRoundedLines(button[i].rec, button[i].roundness, button[i].segments, button[i].thick, button[i].color);
-		DrawText(button[i].text, button[i].rec.x+button[i].rec.width/2-11, button[i].rec.y+button[i].rec.width/2-9, 1, {GOLD});
+
+		Vector2 textspac = MeasureTextEx(GetFontDefault(), button[i].text, 1, 1);
+
+		DrawText(button[i].text, button[i].rec.x+button[i].rec.width/2-textspac.x-6, button[i].rec.y+button[i].rec.width/2-textspac.y-5, 2, {GOLD});
 	}
 };
 
@@ -16,8 +19,7 @@ void Menucollision(buttons* button,Vector2 rec) {
 	{
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(rec, button[i].rec))
 		{
-			screen = button[i].sn;
-			std::cout << button[i].sn << std::endl;
+			screen = button[i].screen;
 		}
 	}
 };

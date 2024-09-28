@@ -4,28 +4,43 @@
 
 int screen = 1;
 
+buttons MenuButtons[4] = {
+{50,050,100,100,1,0.5,1,{GRAY},"play",2},
+{50,175,100,100,1,0.5,1,{GRAY},"author",3},
+{50,300,100,100,1,0.5,1,{GRAY},"quit",4},
+};
+
+
+
+
 int main() {
-	InitWindow(1080, 1000, "Projekt");
+	InitWindow(600, 800, "Projekt");
 	Vector2 MousePoint = { 0.0f,0.0f };
 
 
 	while (!WindowShouldClose()) {
 		//update here
-		
-		std::cout << screen << std::endl;
-
 		MousePoint = GetMousePosition();
+
+
 
 		//draw elements here
 		BeginDrawing();
 		switch (screen)
 		{
 		case 1:
-			
 			renderMenu(MenuButtons);
 			Menucollision(MenuButtons, MousePoint);
-			std::cout << "1" << std::endl;
-		break;
+			break;
+		case 2:
+
+			break;
+		case 3:
+
+			break;
+		case 4:
+			CloseWindow();
+			break;
 		}
 		ClearBackground(RAYWHITE);
 		EndDrawing();
