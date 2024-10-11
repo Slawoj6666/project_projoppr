@@ -1,9 +1,1 @@
-{
-  "version": 3,
-  "configurePresets":[
-    {
-      "name":"debug",
-      "toolchainFile":"$env{VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake"
-    } 
-  ]
-}
+/home/slaw/out/Debug/compile_commands.json
