@@ -24,9 +24,10 @@ if(NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
-set(SOURCE_FILES project_projoppr/main.cpp project_projoppr/menu/menu.cpp
-                 project_projoppr/menu/menu.h)
+set(SOURCE_FILES project_projoppr/main.cpp project_projoppr/menu/menu.cpp)
 
 add_executable(Game ${SOURCE_FILES})
+
+target_include_directories(Game PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
 
 target_link_libraries(Game raylib)
