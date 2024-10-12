@@ -1,4 +1,4 @@
 Diagnostics:
   ClangTidy:
     Add: modernize*
-    Remove: [bugprone-sizeof-expression,modernize-avoid-c-arrays]
+    Remove: [bugprone-sizeof-expression,modernize-avoid-c-arrays,modernize-use-trailing-return-types]
