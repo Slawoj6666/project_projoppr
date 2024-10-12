@@ -4,7 +4,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(project_projoppr CXX)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1 ~/project_projoppr)
 
 set(RAYLIB_VERSION 5.0)
 find_package(raylib 5.0 QUIET) # QUIET or REQUIRED

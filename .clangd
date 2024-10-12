@@ -1,0 +1,5 @@
+Diagnostics:
+  ClangTidy:
+    Add: modernize*
+    Remove: bugprone-sizeof-expression
+    Remove: modernize-avoid-c-arrays 

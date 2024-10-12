@@ -35,3 +35,5 @@
 /.vs
 /.cr/personal
 /x64/Release
+.cache/clangd/index
+build/.cmake/api/v1/query/client-neocmake
