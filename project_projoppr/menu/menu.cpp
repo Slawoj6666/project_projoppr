@@ -1,5 +1,4 @@
 #include "menu.h"
-#include <iostream>
 
 void renderMenu(buttons *button) {
 
@@ -18,10 +17,9 @@ void renderMenu(buttons *button) {
 };
 
 void Menucollision(buttons *button, Vector2 rec) {
-  for (size_t i = 0; i < sizeof(button); i++) {
+  for (int i = 0; i < sizeof(button); i++) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
         CheckCollisionPointRec(rec, button[i].rec)) {
-      std::cout << "kil" << std::endl;
       screen = button[i].screen;
     }
   }

@@ -23,12 +23,16 @@ int main() {
       Menucollision(MenuButtons, MousePoint);
       break;
     case 2:
-
+      // game here
       break;
     case 3:
-
+      // author
+      DrawText("autor Slawomir Pawlus 2bp",
+               390 - MeasureText("autor Slawomir Pawlus 2bp", 16), 50, 16,
+               {GRAY});
       break;
     case 4:
+      // quit
       CloseWindow();
       break;
     }
