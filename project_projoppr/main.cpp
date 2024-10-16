@@ -19,8 +19,9 @@ int main() {
     BeginDrawing();
     switch (screen) {
     case 1:
-      DrawMenu(MenuButtons);
-      MenuButtonCollision(MenuButtons, MousePoint);
+      DrawMenu(MenuButtons, 1, 2, 'a', 4);
+      MenuButtonCollision(MenuButtons, MousePoint, {20, 23, 655, 12},
+                          {82, 12, 23});
       break;
     case 2:
       // game here
