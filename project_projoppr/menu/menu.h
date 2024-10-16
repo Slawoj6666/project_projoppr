@@ -23,5 +23,5 @@ struct backbuttons {
 };
 
 extern int screen;
-void func1(buttons *button);
-void func2(buttons *button, Vector2 rec);
+void DrawMenu(buttons *button);
+void MenuButtonCollision(buttons *button, Vector2 rec);

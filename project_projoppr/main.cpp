@@ -19,8 +19,8 @@ int main() {
     BeginDrawing();
     switch (screen) {
     case 1:
-      func1(MenuButtons);
-      func2(MenuButtons, MousePoint);
+      DrawMenu(MenuButtons);
+      MenuButtonCollision(MenuButtons, MousePoint);
       break;
     case 2:
       // game here

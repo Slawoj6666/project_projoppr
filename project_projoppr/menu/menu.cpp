@@ -1,6 +1,7 @@
 #include "menu.h"
-
-void func1(buttons *button) {
+// Funkcja rysuje przyciski z podanego structa buttons
+// Nie podawać pointera ponieważ wtedy Funkcja nie działa
+void DrawMenu(buttons *button) {
 
   for (int i = 0; i < sizeof(button); i++) {
     DrawRectangleRoundedLines(button[i].rec, button[i].roundness,
@@ -16,7 +17,9 @@ void func1(buttons *button) {
   }
 };
 
-void func2(buttons *button, Vector2 rec) {
+// Funkcja sprawdza czy uzytkownik nacisnal przyciski pryjmuje struct buttons i
+// Vector2 MousePoint
+void MenuButtonCollison(buttons *button, Vector2 rec) {
   for (int i = 0; i < sizeof(button); i++) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
         CheckCollisionPointRec(rec, button[i].rec)) {
