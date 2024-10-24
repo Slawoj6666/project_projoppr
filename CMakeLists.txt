@@ -24,7 +24,8 @@ if(NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
-set(SOURCE_FILES project_projoppr/main.cpp project_projoppr/menu/menu.cpp)
+set(SOURCE_FILES project_projoppr/main.cpp project_projoppr/menu/menu.cpp
+                 project_projoppr/game/game.cpp)
 
 add_executable(Game ${SOURCE_FILES})
 

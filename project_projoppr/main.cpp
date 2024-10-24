@@ -1,3 +1,4 @@
+#include "game/game.h"
 #include "menu/menu.h"
 #include <raylib.h>
 
@@ -7,6 +8,7 @@ buttons MenuButtons[3] = {{50, 050, 100, 100, 1, 0.5, 1, {GRAY}, "play", 2},
                           {50, 175, 100, 100, 1, 0.5, 1, {GRAY}, "author", 3},
                           {50, 300, 100, 100, 1, 0.5, 1, {GRAY}, "quit", 4}};
 
+Player player = {100, 200, 100, 200, 0, true};
 int main() {
   InitWindow(600, 800, "Projekt");
   Vector2 MousePoint = {0.0f, 0.0f};
@@ -24,6 +26,7 @@ int main() {
       break;
     case 2:
       // game here
+      renderPlayer(player);
       break;
     case 3:
       // author

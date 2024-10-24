@@ -16,7 +16,7 @@ void DrawMenu(buttons *button) {
 
 // Funkcja sprawdza czy uzytkownik nacisnal przyciski pryjmuje struct buttons i
 // Vector2 MousePoint
-void MenuButtonCollison(buttons *button, Vector2 rec) {
+void MenuButtonCollision(buttons *button, Vector2 rec) {
   for (int i = 0; i < sizeof(button); i++) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) &&
         CheckCollisionPointRec(rec, button[i].rec)) {
