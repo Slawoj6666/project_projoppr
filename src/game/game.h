@@ -12,5 +12,6 @@ struct EnvItem {
   Rectangle rec;
 };
 
-void renderPlayer(Player player);
-void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len);
+void renderPlayer(Texture2D player, Player Playerpos);
+void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
+                   Texture2D platex, Texture2D startex);

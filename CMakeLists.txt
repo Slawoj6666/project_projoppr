@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION  4.0)
 
 project(project_projoppr CXX)
 
@@ -22,11 +22,12 @@ if(NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
-set(SOURCE_FILES src/main.cpp src/menu/menu.cpp
-                 src/game/game.cpp)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/home/slawomir/prog/output")
+
+set(SOURCE_FILES src/main.cpp src/menu/menu.cpp src/game/game.cpp)
+
+file(COPY  assets/  DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-
-target_include_directories(${PROJECT_NAME} PRIVATE  ${CMAKE_CURRENT_SOURCE_DIR}/inc )
 
 target_link_libraries(${PROJECT_NAME} raylib)

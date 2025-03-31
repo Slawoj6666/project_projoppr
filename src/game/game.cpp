@@ -6,12 +6,11 @@
 #define PLAYER_JUMP_SPD 500.0f
 #define PLAYER_HOR_SPD 200.0f
 
-void renderPlayer(Player player) {
-  DrawRectangle(player.Playerpos.x, player.Playerpos.y, player.Player.x,
-                player.Player.y, {BLACK});
+void renderPlayer(Texture2D player, Player Playerpos) {
+  DrawTexture(player, Playerpos.Playerpos.x, Playerpos.Playerpos.y, GRAY);
 }
 
-void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len) {
+void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,Texture2D platex,Texture2D startex) {
   bool hitobsticle = false;
 
   if (IsKeyDown(KEY_LEFT)) {
@@ -24,7 +23,11 @@ void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len) {
     player->speed = -PLAYER_JUMP_SPD;
   }
   for (int i = 0; i < len; i++) {
-    DrawRectangleRec(envitem[i].rec, {BLACK});
+    if(i == 0 ){
+    DrawTexture(startex,envitem[i].rec.x,envitem[i].rec.y,GRAY);
+    }else{
+    DrawTexture(platex,envitem[i].rec.x,envitem[i].rec.y,GRAY);
+    }
   }
   for (int i = 0; i < len; i++) {
 
