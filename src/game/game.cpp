@@ -10,7 +10,8 @@ void renderPlayer(Texture2D player, Player Playerpos) {
   DrawTexture(player, Playerpos.Playerpos.x, Playerpos.Playerpos.y, GRAY);
 }
 
-void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,Texture2D platex,Texture2D startex) {
+void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
+                   Texture2D platex, Texture2D startex) {
   bool hitobsticle = false;
 
   if (IsKeyDown(KEY_LEFT)) {
@@ -23,21 +24,21 @@ void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,Textur
     player->speed = -PLAYER_JUMP_SPD;
   }
   for (int i = 0; i < len; i++) {
-    if(i == 0 ){
-    DrawTexture(startex,envitem[i].rec.x,envitem[i].rec.y,GRAY);
-    }else{
-    DrawTexture(platex,envitem[i].rec.x,envitem[i].rec.y,GRAY);
+    if (i == 0) {
+      DrawTexture(startex, envitem[i].rec.x, envitem[i].rec.y, GRAY);
+    } else {
+      DrawTexture(platex, envitem[i].rec.x, envitem[i].rec.y, GRAY);
     }
   }
   for (int i = 0; i < len; i++) {
 
-    if (envitem[i].rec.x - 50 <= player->Playerpos.x &&
+    if (envitem[i].rec.x - player->Player.x <= player->Playerpos.x &&
         envitem[i].rec.x + envitem[i].rec.width >= player->Playerpos.x &&
-        envitem[i].rec.y - 50 >= player->Playerpos.y &&
+        envitem[i].rec.y - player->Player.y >= player->Playerpos.y &&
         envitem[i].rec.y - 50 <= player->Playerpos.y + player->speed * delta) {
       hitobsticle = true;
       player->speed = 0.0f;
-      player->Playerpos.y = envitem[i].rec.y - 50;
+      player->Playerpos.y = envitem[i].rec.y - player->Player.y;
       break;
     }
   }

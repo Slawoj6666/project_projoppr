@@ -40,3 +40,5 @@ build/.cmake/api/v1/query/client-neocmake
 build/Debug
 project_projoppr/out/Debug
 src/out/Debug/_deps/raylib-src/projects
+src/out/Debug
+src/.cache/clangd/index

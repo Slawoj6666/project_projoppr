@@ -1,10 +1,7 @@
 #include "game/game.h"
 #include "menu/menu.h"
 #include <cstdio>
-#include <filesystem>
-#include <iostream>
 #include <raylib.h>
-#include <string>
 int screen = 1;
 
 buttons MenuButtons[4] = {{50, 050, 100, 100, 1, 0.5, 1, {GRAY}, "play", 2},
@@ -13,7 +10,7 @@ buttons MenuButtons[4] = {{50, 050, 100, 100, 1, 0.5, 1, {GRAY}, "play", 2},
 
 buttons back = {250, 300, 100, 100, 1, 0.5, 1, {GRAY}, "back", 1};
 
-Player player = {50, 50, 150, 700, 0, true};
+Player player = {50, 50, 250, 600, 0, true};
 EnvItem envitems[5] = {{0, 750, 800, 50},
                        {000, 500, 100, 20},
                        {500, 500, 100, 20},
@@ -24,6 +21,7 @@ int main() {
   InitWindow(600, 800, "Projekt");
   Vector2 MousePoint = {0.0f, 0.0f};
   FilePathList ass;
+  bool windowexit = false;
 
   Image ads = LoadImage("assets/player.png");
   Texture2D texplay = LoadTextureFromImage(ads);
@@ -35,12 +33,18 @@ int main() {
   Texture2D texstart = LoadTextureFromImage(start);
 
   SetTargetFPS(60);
-  while (!WindowShouldClose()) {
+  while (!windowexit) {
     // update here
     MousePoint = GetMousePosition();
     float deltatime = GetFrameTime();
     // draw elements here
     BeginDrawing();
+    ClearBackground(RAYWHITE);
+
+    if (WindowShouldClose()) {
+      windowexit = true;
+    }
+
     switch (screen) {
     case 1:
       DrawMenu(MenuButtons, 3);
@@ -62,12 +66,11 @@ int main() {
       break;
     case 4:
       // quit
-      CloseWindow();
-      EndDrawing();
+      windowexit = true;
       break;
     }
-    ClearBackground(RAYWHITE);
     EndDrawing();
   }
+  CloseWindow();
   return 0;
 }

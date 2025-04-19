@@ -11,7 +11,7 @@ if(NOT raylib_FOUND) # If there's none, fetch and build raylib
   FetchContent_Declare(
     raylib
     DOWNLOAD_EXTRACT_TIMESTAMP OFF
-    URL https://github.com/raysan5/raylib/archive/refs/tags/5.0.tar.gz)
+    URL https://github.com/raysan5/raylib/archive/refs/tags/${RAYLIB_VERSION}.tar.gz)
   FetchContent_GetProperties(raylib)
   if(NOT raylib_POPULATED) # Have we downloaded raylib yet?
     set(FETCHCONTENT_QUIET NO)
@@ -26,8 +26,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "/home/slawomir/prog/output")
 
 set(SOURCE_FILES src/main.cpp src/menu/menu.cpp src/game/game.cpp)
 
-file(COPY  assets/  DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} raylib)
+
+file(INSTALL  assets/  DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/assets)
