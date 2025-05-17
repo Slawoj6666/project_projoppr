@@ -14,4 +14,5 @@ struct EnvItem {
 
 void renderPlayer(Texture2D player, Player Playerpos);
 void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
-                   Texture2D platex, Texture2D startex);
+                   Texture2D platex, Texture2D startex, Sound jump,
+                   Sound landing);

@@ -1,17 +1,18 @@
 #include "game.h"
 #include "raylib.h"
-#include <cstdio>
 
 #define G 400
 #define PLAYER_JUMP_SPD 500.0f
 #define PLAYER_HOR_SPD 200.0f
+bool playlanding = true;
 
 void renderPlayer(Texture2D player, Player Playerpos) {
   DrawTexture(player, Playerpos.Playerpos.x, Playerpos.Playerpos.y, GRAY);
 }
 
 void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
-                   Texture2D platex, Texture2D startex) {
+                   Texture2D platex, Texture2D startex, Sound jump,
+                   Sound landing) {
   bool hitobsticle = false;
 
   if (IsKeyDown(KEY_LEFT)) {
@@ -22,6 +23,7 @@ void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
   }
   if (IsKeyDown(KEY_SPACE) && player->canjump == true) {
     player->speed = -PLAYER_JUMP_SPD;
+    PlaySound(jump);
   }
   for (int i = 0; i < len; i++) {
     if (i == 0) {
@@ -36,9 +38,14 @@ void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
         envitem[i].rec.x + envitem[i].rec.width >= player->Playerpos.x &&
         envitem[i].rec.y - player->Player.y >= player->Playerpos.y &&
         envitem[i].rec.y - 50 <= player->Playerpos.y + player->speed * delta) {
+
+      if (playlanding) {
+        PlaySound(landing);
+      }
       hitobsticle = true;
       player->speed = 0.0f;
       player->Playerpos.y = envitem[i].rec.y - player->Player.y;
+
       break;
     }
   }
@@ -46,7 +53,9 @@ void PlayerPhysics(Player *player, EnvItem *envitem, float delta, int len,
     player->Playerpos.y += player->speed * delta;
     player->speed += G * delta;
     player->canjump = false;
+    playlanding = true;
   } else {
+    playlanding = false;
     player->canjump = true;
   }
 };

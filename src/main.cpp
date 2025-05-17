@@ -32,6 +32,11 @@ int main() {
   Image start = LoadImage("assets/start.png");
   Texture2D texstart = LoadTextureFromImage(start);
 
+  InitAudioDevice();
+
+  Sound jump = LoadSound("assets/jump.wav");
+  Sound landing = LoadSound("assets/landing.wav");
+
   SetTargetFPS(60);
   while (!windowexit) {
     // update here
@@ -52,7 +57,8 @@ int main() {
       break;
     case 2:
       // game here
-      PlayerPhysics(&player, envitems, deltatime, 5, texenv, texstart);
+      PlayerPhysics(&player, envitems, deltatime, 5, texenv, texstart, jump,
+                    landing);
       renderPlayer(texplay, player);
       break;
     case 3:
@@ -71,6 +77,9 @@ int main() {
     }
     EndDrawing();
   }
+  UnloadSound(jump); // Unload sound data
+  UnloadSound(landing);
+  CloseAudioDevice();
   CloseWindow();
   return 0;
 }
